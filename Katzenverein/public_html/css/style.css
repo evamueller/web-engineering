@@ -1,0 +1,46 @@
+body {
+    background-color: lightgrey;
+    border: 1px black solid; 
+}
+
+header {
+    width: 100%;
+    background-color: darkgray;
+}
+
+header h1 {
+    display: inline;
+}
+
+nav {
+    background-color: darkgray;
+    padding: 2px;
+}
+
+nav li {
+    border: 1px black dashed;
+    padding: 5px;
+    display: inline;
+}
+
+nav a:link {
+    color: orange;
+}
+
+nav a:visited {
+    color: darkorange;
+}
+
+footer {
+    width: 100%;
+    background-color: darkgray;
+}
+
+.tableFull {
+    border: 1px black dashed;
+    width: 100%;
+    height: 100%;
+}
+.tableFull tr, td, th {
+    border: 1px black solid;
+}
