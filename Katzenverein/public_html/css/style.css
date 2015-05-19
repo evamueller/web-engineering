@@ -1,46 +1,75 @@
 body {
-    background-color: lightgrey;
-    border: 1px black solid; 
+    margin: 20px;
+    padding: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: lightgrey;
+}
+
+#content {
+    margin: 0 auto;
+    max-width: 960px;
+    background: white;
+    border: 1px black solid;        
+    box-shadow: 10px 10px 5px grey;
 }
 
 header {
-    width: 100%;
-    background-color: darkgray;
+    background: darkgray;
+    width: 95%; 
+    padding: 2% 0 2% 5%;
+    border-bottom: 1px black solid;
+}
+header img {
+    vertical-align: middle;
 }
 
 header h1 {
     display: inline;
+    text-shadow: 2px 2px darkorange;
+}
+
+article {
+    float: right;
+    margin: 1.0416666666666666666666666666667%;     /* 10/960*100 */
+    width: 68.75%;                                  /* 660/960*100 */
 }
 
 nav {
-    background-color: darkgray;
-    padding: 2px;
+    float: left;
+    width: 29.166666666666666666666666666667%;      /* 280/960*100 */
+    margin: 1.0416666666666666666666666666667% 0;   /* 10/960*100 */
+    background: whitesmoke;
 }
 
 nav li {
-    border: 1px black dashed;
-    padding: 5px;
-    display: inline;
+    list-style: square;
 }
 
-nav a:link {
+a:link {
     color: orange;
 }
 
-nav a:visited {
+a:visited {
     color: darkorange;
 }
 
 footer {
-    width: 100%;
-    background-color: darkgray;
+    clear: both;
+    background: darkgray;
+    padding: 1.0416666666666666666666666666667%;     /* 10/960*100 */
+    border-top: 1px black solid;
 }
 
 .tableFull {
-    border: 1px black dashed;
     width: 100%;
     height: 100%;
 }
 .tableFull tr, td, th {
     border: 1px black solid;
+}
+
+#vorstand section > img {
+    border: 1px black solid;
+    margin-right: 1em;
+    float: left;
 }
