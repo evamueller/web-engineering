@@ -1,8 +1,8 @@
-package classes;
+package model;
 
 import java.util.Date;
 
-public class formData {
+public class FormModel {
 
     private String firstName;
     private String lastName;
@@ -12,7 +12,7 @@ public class formData {
     private String headline;
     private String message;
     
-    public formData() { }
+    public FormModel() { }
     
     public String getFirstName() {
         return firstName;

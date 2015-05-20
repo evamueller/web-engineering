@@ -1,6 +1,6 @@
-package servlets;
+package controller;
 
-import classes.formData;
+import model.FormModel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
@@ -14,12 +14,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "formular", urlPatterns = {"/formular"})
-public class formular extends HttpServlet {
+@WebServlet(name = "FormCtrl", urlPatterns = {"/FormCtrl"})
+public class FormCtrl extends HttpServlet {
 
-    public static List<formData> dataList;
+    public static List<FormModel> dataList;
 
-    public formular() {
+    public FormCtrl() {
         this.dataList = new ArrayList<>();
     }
     /**
@@ -39,10 +39,10 @@ public class formular extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet formular</title>");            
+            out.println("<title>Ihre Anfrage wurde abgeschickt.</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet formular at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Vielen Dank für Ihre Anfrage.</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -84,7 +84,7 @@ public class formular extends HttpServlet {
         System.out.println(request.getParameter("message"));
         */
         
-        formData newData = new formData();
+        FormModel newData = new FormModel();
         newData.setFirstName(request.getParameter("firstName"));
         newData.setLastName(request.getParameter("lastName"));
         newData.setEmail(request.getParameter("email"));
@@ -95,7 +95,7 @@ public class formular extends HttpServlet {
         dataList.add(newData);
         
         System.out.println("Requests received so far:");
-        for (formData data : dataList) {
+        for (FormModel data : dataList) {
             System.out.println(data);
             System.out.println("-------------------------------");
         }
